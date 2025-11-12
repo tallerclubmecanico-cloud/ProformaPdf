@@ -1,15 +1,15 @@
 /* Estilos Generales y Reseteo Básico */
 body {
-    font-family: Arial, sans-serif; /* Usar una fuente genérica similar */
+    font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0; /* Quitar el padding del body */
+    padding: 0;
     display: flex;
     justify-content: center;
 }
 
 .orden-trabajo {
-    width: 850px; /* Ajuste para un mejor ancho de documento A4/carta */
+    width: 850px;
     background-color: white;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -17,51 +17,45 @@ body {
 /* --- Estilos del Encabezado (HEADER) --- */
 
 .header {
-    height: 150px; /* Altura fija para el área superior */
+    height: 150px;
     position: relative;
     overflow: hidden;
 }
 
-/* Fondo Amarillo Izquierdo (Rectángulo que se fusiona con el triángulo) */
 .header-fondo-izquierdo {
     position: absolute;
     top: 0;
     left: 0;
-    width: 65%; /* Ocupa más de la mitad para dar espacio al título DATOS */
+    width: 65%;
     height: 100%;
-    background-color: #FFD700; /* Amarillo similar al diseño */
+    background-color: #FFD700;
     z-index: 1;
 }
 
-/* Título DATOS */
 .datos-titulo {
     position: absolute;
     top: 30px;
-    left: 40px; /* Posicionamiento similar al margen izquierdo del contenido */
+    left: 40px;
     color: black;
     font-size: 1.8em;
     font-weight: 700;
     margin: 0;
-    z-index: 2; /* Sobre la barra amarilla */
+    z-index: 2;
 }
 
-/* --- Estilos del Área del Logo (Derecha) - Triángulo Diagonal --- */
-
 .logo-area {
-    background-color: #FFD700; /* Fondo amarillo */
-    width: 50%; /* Controla el ancho visible del logo */
+    background-color: #FFD700;
+    width: 50%;
     min-height: 150px;
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
-    z-index: 3; /* Sobre la barra izquierda para el efecto de superposición */
-    /* Crear la forma diagonal usando clip-path */
-    /* 0% 0 (Esquina Superior Izquierda) se mueve a 30% del ancho para el corte diagonal */
+    z-index: 3;
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%); 
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Alinear el contenido a la derecha */
+    justify-content: flex-end;
     padding-right: 40px;
 }
 
@@ -70,10 +64,13 @@ body {
 }
 
 .logo-icon {
-    /* Reemplazar con imagen real en producción */
-    /* Este es solo un placeholder visual */
+    /* En un entorno real, aquí iría una imagen de logo */
     height: 30px; 
     margin-bottom: 5px;
+    /* Temporal para visualizar el espacio */
+    background-color: transparent; 
+    width: 100%;
+    display: block;
 }
 
 .logo-area h1 {
@@ -94,125 +91,7 @@ body {
 /* --- Estilos del Contenido Principal (MAIN) --- */
 
 .content {
-    /* No se necesita display:flex aquí, ya que los datos están en su propia sección */
-    padding: 0 40px 40px 40px; /* Márgenes del contenido */
+    padding: 0 40px 40px 40px;
 }
 
-.datos-seccion {
-    margin-top: 30px; /* Espacio debajo del header */
-    margin-bottom: 40px;
-}
-
-.field-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px; /* Espaciado más compacto */
-}
-
-.field-row label {
-    font-size: 1em;
-    font-weight: 700;
-    color: black; /* Las etiquetas parecen ser negras */
-    width: 100px; 
-    flex-shrink: 0;
-}
-
-.field-input {
-    flex-grow: 0; /* No ocupa todo el ancho, solo el necesario */
-    width: 150px; /* Ancho fijo para las cajas de datos */
-    border: 1px solid #FFD700; 
-    padding: 4px 10px;
-    background-color: white;
-    text-align: left;
-    font-weight: 400;
-    font-size: 0.9em;
-    height: 1.2em;
-    color: black;
-}
-
-/* --- Título Proforma --- */
-
-.proforma-titulo {
-    text-align: center;
-    color: black;
-    font-size: 1.8em;
-    font-weight: 700;
-    margin: 30px 0;
-}
-
-/* --- Estilos de la Sección de Proforma (Tabla) --- */
-
-.proforma-tabla {
-    /* Sin padding aquí, ya se manejó en .content */
-}
-
-/* Encabezado de la Tabla */
-.tabla-header {
-    display: flex;
-    background-color: #FFD700; 
-    font-weight: 700;
-    color: black;
-    text-transform: uppercase;
-    font-size: 0.8em; /* Fuente más pequeña para que quepa */
-    border: 1px solid #FFD700; /* Borde completo para el header */
-}
-
-.tabla-header div {
-    padding: 10px 5px;
-    text-align: left;
-    flex-basis: 0; /* Base de flex para controlar la distribución */
-    flex-grow: 1;
-}
-
-/* Control de Ancho de Columnas */
-.col-sistema {
-    flex-grow: 2; /* El sistema ocupa más espacio */
-    min-width: 120px;
-}
-
-.col-trabajo, .col-costotrabajo, .col-repuesto, .col-costorepuesto {
-    flex-grow: 1;
-    min-width: 100px; /* Mínimo para asegurar espacio */
-    text-align: center;
-}
-
-/* Filas de Contenido */
-
-.tabla-row-container {
-    border: 1px solid #FFD700; /* Borde amarillo alrededor de cada grupo de filas */
-    margin-bottom: 10px; /* Espacio entre los grupos */
-}
-
-.tabla-row {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-}
-
-.tabla-row div {
-    padding: 0 5px; /* Padding ajustado */
-    text-align: left;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-basis: 0;
-    flex-grow: 1;
-    font-size: 0.9em;
-    color: black;
-}
-
-/* Aplicar el mismo control de ancho a las celdas de datos */
-.tabla-row .col-sistema {
-    flex-grow: 2;
-    min-width: 120px;
-}
-
-.tabla-row .col-trabajo, 
-.tabla-row .col-costotrabajo, 
-.tabla-row .col-repuesto, 
-.tabla-row .col-costorepuesto {
-    flex-grow: 1;
-    min-width: 100px;
-    justify-content: center; /* Centrar el texto en las celdas de datos */
-    text-align: center;
-}
+.
