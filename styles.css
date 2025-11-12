@@ -158,3 +158,51 @@ body {
     height: 1.2em; /* Altura del campo de texto */
     color: black;
 }
+
+/* --- Estilos de la Sección de Proforma (Tabla) --- */
+
+.proforma-tabla {
+    padding: 0 30px 30px 30px; /* Misma alineación que el contenido principal */
+    margin-top: 30px; /* Espacio entre la tabla de mantenimiento y repuestos */
+}
+
+.proforma-tabla .tabla-header {
+    /* Reutiliza los estilos del header de tabla general */
+    background-color: #FFD700;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    font-size: 1em;
+}
+
+.proforma-tabla .tabla-header div {
+    padding: 10px;
+    text-align: left;
+}
+
+.proforma-tabla .col-sistema {
+    flex-grow: 1; /* Permite que ocupe el mayor espacio posible */
+}
+
+.proforma-tabla .col-trabajo {
+    width: 120px; /* Ancho fijo para la columna de cantidad */
+    text-align: center;
+}
+
+.proforma-tabla .col-costotrabajo {
+    width: 100px; /* Ancho fijo para la columna de precio */
+    text-align: center;
+}
+
+.proforma-tabla .col-repuesto {
+    width: 100px; /* Ancho fijo para la columna de foto */
+    text-align: center;
+}
+
+.proforma-tabla .col-costorepuesto {
+    width: 100px; /* Ancho fijo para la columna de foto */
+    text-align: center;
+}
+
+
+
