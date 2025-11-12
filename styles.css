@@ -24,40 +24,6 @@ body {
     overflow: hidden; /* Necesario para el corte diagonal*/
 }
 
-.header-info {
-    padding: 30px;
-    background-color: white;
-    /* Crear un área diagonal a la izquierda */
-    clip-path: polygon(0 0, 70% 0, 85% 100%, 0 100%);
-    width: 60%;
-    position: relative;
-    z-index: 2; /* Asegura que esté sobre la esquina amarilla del content */
-}
-
-.field-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.field-group label {
-    font-size: 1.1em;
-    font-weight: 700;
-    color: #333;
-    width: 80px; /* Ancho fijo para las etiquetas de ORDEN/FECHA */
-}
-
-.field-group .field-value {
-    border: 2px solid #333; /* Borde oscuro */
-    padding: 4px 10px;
-    background-color: white;
-    width: 150px;
-    text-align: left;
-    font-weight: 400;
-    font-size: 1em;
-    height: 1.2em; /* Altura del campo de texto */
-}
-
 /* --- Estilos del Área del Logo (Derecha) --- */
 
 .logo-area {
