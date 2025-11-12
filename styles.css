@@ -132,3 +132,29 @@ body {
     display: inline-block;
     padding-bottom: 5px;
 }
+
+.field-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.field-row label {
+    font-size: 1em;
+    font-weight: 700;
+    color: #333;
+    width: 100px; /* Ancho fijo para las etiquetas */
+    flex-shrink: 0; /* Evita que la etiqueta se encoja */
+}
+
+.field-input {
+    flex-grow: 1;
+    border: 2px solid #FFD700; /* Borde amarillo como en la imagen */
+    padding: 4px 10px;
+    background-color: white;
+    text-align: left;
+    font-weight: 400;
+    font-size: 0.7em;
+    height: 1.2em; /* Altura del campo de texto */
+    color: black;
+}
