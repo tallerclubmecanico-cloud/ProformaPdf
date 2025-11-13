@@ -20,10 +20,11 @@ body {
     color: white;
     text-align: left;
     font-weight: bold;
-    align-items: stretch;
+    
 }
 
 .tabla-proforma th,
 .tabla-proforma td {
     padding: 12px 15px;
+    align-items: stretch;
 }
